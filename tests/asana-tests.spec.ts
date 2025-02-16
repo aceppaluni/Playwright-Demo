@@ -22,7 +22,7 @@ async function taskValidator(page, column: string, task: string, tags: string[])
         const tagLocator = page.locator('xpath=//*[@id="root"]/div/div[2]/main/div/div/div[1]/div/div[1]/div[1]');
         await expect(tagLocator).toBeVisible();
     }
-}
+};
 
 test.describe('Asana Demo App', () => {
     test('Test One: Verify "Implemet user authentication" in web application', async ({page}) => {
@@ -60,4 +60,4 @@ test.describe('Asana Demo App', () => {
         await navigate(page, 'Mobile Application');
         await taskValidator(page, 'Done', 'App icon design', ['Design']);
     });
-})
+});
