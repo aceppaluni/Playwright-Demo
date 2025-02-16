@@ -55,7 +55,7 @@ async function login(page) {
     await page.fill('input[id="password"]', 'password123');
     await page.click('button[type="submit"]');
     await page.waitForLoadState('networkidle');
-}
+};
 
 test.describe('Asana Demo App Tests', () => {
     testCases.forEach(({ name, section, task, column, tags }) => {
@@ -75,7 +75,7 @@ test.describe('Asana Demo App Tests', () => {
             for (const tag of tags) {
                 const tagLocator = page.locator('xpath=//*[@id="root"]/div/div[2]/main/div/div/div[1]/div/div[1]/div[1]');
                 await expect(tagLocator).toBeVisible();
-            }
+            };
         });
     });
 });
